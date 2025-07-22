@@ -1,0 +1,94 @@
+:root{
+    --primary-color: #363f48;
+    --colorBack: #ffffff;
+    --colorTwo: #17181c;
+    --colorThere: #676e7e;
+}
+
+
+*{
+    
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #363f48;
+    margin: 4rem;
+}
+.calculator-container{
+    position: absolute;
+    width: 370px;
+    background: var(--primary-color);
+    box-shadow: 3px 3px 3px var(--colorTwo),
+            -3px -3px 3px var(--colorThere);
+            border-radius: 10px;
+            padding: 1rem;
+            overflow: hidden;
+            color: white;
+}
+
+.calculator-display{
+    display: block;
+    width: 100%;
+    background: transparent; 
+    box-shadow: inset 3px 3px 3px var(--colorTwo),
+            inset -3px -3px 3px var(--colorThere);
+            text-align: right;
+            padding-top: 1.5rem;
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 3.4rem;
+            outline: none;
+            border: none;
+            color: #ffffff;
+}
+
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:3px;
+}
+
+button{
+    background: #363f48;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    width: 70px ;
+    height: 70px;
+    box-shadow: 3px 3px 3px var(--colorTwo),
+            -3px -3px 3px var(--colorThere);
+            border-radius: 30px;
+            margin: 0.3rem;
+            cursor: pointer;
+}
+button:active,
+button:focus{
+    background: var(--primary-color);
+    box-shadow: inset 3px 3px 3px var(--colorTwo),
+            inset -3px -3px 3px var(--colorThere);
+
+}
+
+.button-operator{
+    color: cyan;
+}
+
+.button-equals{
+    grid-column: 3/5;
+    grid-row: 5;
+    width: 95%;
+    color: cyan;
+
+}
+.button-clear{
+    color: cyan;
+}
